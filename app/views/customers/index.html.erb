@@ -1,0 +1,29 @@
+<h1>Customers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Sale ID</th>
+      <th>Name</th>
+      <th>Account Number</th>
+      <th>Company Email</th>
+      <th>Invoice Number</th>
+      <th>Invoice Frequency</th>
+      <!-- More attributes here... -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @sales.each do |sale| %>
+      <tr>
+        <td><%= sale.id %></td>
+        <td><%= sale.customer.name %></td>
+        <td><%= sale.customer.account_no %></td>
+        <td><%= sale.customer.email %></td>
+        <td><%= sale.invoice_no %></td>
+        <td><%= sale.invoice_frequency %></td>
+        <!-- More attributes here... -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>

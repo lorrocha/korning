@@ -1,0 +1,25 @@
+<h1>Customer</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Account Number</th>
+      <th>Company Email</th>
+      <th>Invoice Number</th>
+      <th>Invoice Frequency</th>
+      <!-- More attributes here... -->
+    </tr>
+  </thead>
+
+  <tbody>
+      <tr>
+        <td><%= @sale.customer.name %></td>
+        <td><%= @sale.customer.account_no %></td>
+        <td><%= @sale.customer.email %></td>
+        <td><%= @sale.invoice_no %></td>
+        <td><%= @sale.invoice_frequency %></td>
+        <!-- More attributes here... -->
+      </tr>
+  </tbody>
+</table>
