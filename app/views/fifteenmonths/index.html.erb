@@ -20,7 +20,7 @@
         <td><%= '$'+sale.sale_amount.to_s %></td>
         <td><%= sale.invoice_no %></td>
         <td><%= sale.units_sold %></td>
-        <td><%= (sale.sale_amount/sale.units_sold).round(2) %></td>
+        <td><%= sale.calculate_per_unit %></td>
         <td><%= sale.invoice_frequency %></td>
         <!-- More attributes here... -->
       </tr>

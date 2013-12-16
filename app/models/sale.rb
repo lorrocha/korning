@@ -8,4 +8,7 @@ class Sale < ActiveRecord::Base
     Sale.where("sale_date > ?", 15.months.ago).order("sale_date DESC", :invoice_no)
   end
 
+  def calculate_per_unit
+    (self.sale_amount/self.units_sold).round(2)
+  end
 end
