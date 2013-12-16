@@ -1,0 +1,26 @@
+<h1>Sales Closed In The Last 3 months</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Sale amount</th>
+      <th>Invoice Number</th>
+      <th>Units Sold</th>
+      <!-- More attributes here... -->
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @three_months.each do |sale| %>
+      <tr>
+        <td><%= sale.sale_date %></td>
+        <td><%= sale.sale_amount %></td>
+        <td><%= sale.invoice_no %></td>
+        <td><%= sale.units_sold %></td>
+
+        <!-- More attributes here... -->
+      </tr>
+    <% end %>
+  </tbody>
+</table>
