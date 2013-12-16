@@ -1,0 +1,30 @@
+<h1>Employee Reports</h1>
+
+<strong><p><%= "#{@employee_report.first_name} #{@employee_report.last_name}: #{@employee_report.email}" %></p></strong>
+  <table>
+    <thead>
+      <tr>
+        <th>Sale Date</th>
+        <th>Sale Amount</th>
+        <th>Invoice Number</th>
+        <th>Units Sold</th>
+        <th>Price per Unit</th>
+        <th>Invoice Frequency</th>
+        <!-- More attributes here... -->
+      </tr>
+    </thead>
+
+    <tbody>
+        <% @employee_report.report.each do |sale| %>
+        <tr>
+          <td><%= sale.sale_date %></td>
+          <td><%= '$'+ sale.sale_amount.to_s %></td>
+          <td><%= sale.invoice_no %></td>
+          <td><%= sale.units_sold %></td>
+          <td><%= sale.calculate_per_unit %></td>
+          <td><%= sale.invoice_frequency %></td>
+          <!-- More attributes here... -->
+        </tr>
+        <%end%>
+    </tbody>
+  </table>
